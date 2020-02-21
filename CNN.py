@@ -48,20 +48,11 @@ plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper left')
 plt.show()
-# Plot training & validation loss values
-# plt.plot(history.history['loss'])
-# plt.plot(history.history['val_loss'])
-# plt.title('Model loss')
-# plt.ylabel('Loss')
-# plt.xlabel('Epoch')
-# plt.legend(['Train', 'Test'], loc='upper left')
-# plt.show()
-
-
-from sklearn.metrics import  confusion_matrix
-Y_train = pd.Series( Y_train, name='Actual')
-Y_pred = pd.Series(Y_test, name='Predicted')
-df_confusion = pd.crosstab(Y_train, Y_pred, rownames=['Actual'], colnames=['Predicted'], margins=True)
-print(df_confusion)
-from sklearn.metrics import classification_report
-print(classification_report(Y_test,Y_prec))
+Plot training & validation loss values
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('Model loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Test'], loc='upper left')
+plt.show() 
